@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+    :root{
+        --gradientbg : linear-gradient(to bottom,#0b0d1c,#01050b);
+    }
+
+    @font-face {
+        font-family: fontitalic;
+        src: url('assets/fonts/SfDistantGalaxyItalic-WV3Y.ttf');
+    }
+
+    .grabg{
+        background: var(--gradientbg);
+    }
+
+    .grabg2{
+        background: linear-gradient(to right bottom,#2f81f7,#31d6ff) !important;
+    }
+
+    .textgra{
+        background-clip: text !important;
+        color: transparent !important;
+    }
+
+    .nav.router-link-active{
+        background: linear-gradient(to right bottom,#2f81f7 42%,#31d6ff);
+        color:white !important;
+        font-weight: 400 !important;
+    }
+
+    ::-webkit-scrollbar{
+        width: 5px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        width: 5px;
+        background-color: transparent;
+    }
+
+    #genres:hover ::-webkit-scrollbar-thumb,#year:hover ::-webkit-scrollbar-thumb{
+        background-color: #404851;
+        border-radius: 8px;
+    }
+
+    #genres:hover > div,#year:hover > div{
+        border: 1px solid #404851 !important;
+    }
+
+    .themefont{
+        font-family: fontitalic;
+    }
+
+    .montfont{
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    #banner{
+        background-position: center center !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+    }
+
+    #banner_overlay{
+        background:linear-gradient(to bottom,#01040930 55%,#01040998 70%,#010409 95%);
+    }
+    
+    .skeleton{
+        background: linear-gradient(-45deg,#0f1723 20%,#2a364cc0 35%,#0f1723 60%);
+        background-size: 540% !important;
+        border : 1px solid #262b3374 !important;
+        animation: myani 2s linear infinite;
+    }   
+
+    @keyframes myani{
+        from{
+            background-position : right;
+        }
+        to{
+            background-position : left;
+        }
+    }
+    
+    @media screen and (min-width:910px){
+        #sidebar{
+            left: 0 ;
+            top: 48px !important;
+        }
+        .marleft{
+            margin-left: 220px;
+        }
+    }
+
+}
